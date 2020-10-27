@@ -24,7 +24,7 @@ private:
                 percent = 0;
             if (percent > 100)
                 percent = 100;
-            return float(percent/100) * 255;
+            return float(percent/100.0) * 255.0;
     }
 
     MotorsInterface motors;
