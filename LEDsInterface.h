@@ -13,7 +13,8 @@ enum Colors {
   WHITE,
   RED,
   GREEN,
-  BLUE
+  BLUE,
+  YELLOW
 };
 
 #define LEDS_INDEX_CHECK(index)      \
@@ -41,6 +42,8 @@ class LEDsInterface {
             return Colors::GREEN;
         if (str_color == "blue")
             return Colors::BLUE;
+        if (str_color == "yellow")
+            return Colors::YELLOW;
         return Colors::BLACK;
     }
     

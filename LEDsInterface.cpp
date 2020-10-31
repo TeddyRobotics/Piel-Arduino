@@ -8,8 +8,8 @@
 void LEDsInterface::Initialize() {
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
   for (int i = 0; i < NUM_LEDS; i++) {
-    leds[i] = CRGB::Green;
-    cached_leds[i] = Colors::RED;
+    leds[i] = CRGB::Black;
+    cached_leds[i] = Colors::BLACK;
   }
   FastLED.show();
 }
@@ -43,6 +43,9 @@ void LEDsInterface::SetColor(int index, Colors color) {
     case Colors::BLUE:
       leds[index] = CRGB::Blue;
       break;
+    case Colors::YELLOW:
+      leds[index] = CRGB::Yellow;
+      break;
   }
   FastLED.show();
 }
@@ -68,6 +71,10 @@ void LEDsInterface::SetColors(Colors color) {
     case Colors::BLUE:
       leds[0] = CRGB::Blue;
       leds[1] = CRGB::Blue;
+      break;
+    case Colors::YELLOW:
+      leds[0] = CRGB::Yellow;
+      leds[1] = CRGB::Yellow;
       break;
   }
   FastLED.show();
