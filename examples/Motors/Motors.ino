@@ -13,7 +13,7 @@ void loop() {
   //pielRobot.move_back(speed);
   //pielRobot.move_left(speed);
   //pielRobot.move_right(speed);
-  delay(5);
+  delay(5000);
   pielRobot.stop();
-  delay(1);
+  delay(1000);
 }
