@@ -15,14 +15,14 @@ void Piel::Initialize() {
 void Piel::move_forward(int speed_percent) {
     int speed_8bit = speed_percent_to_8bit(speed_percent);
     motors.enable(speed_8bit, speed_8bit);
-    motors.move_a_clockwise();
+    motors.move_a_counterclockwise();
     motors.move_b_clockwise();
 }
 
 void Piel::move_back(int speed_percent) {
     int speed_8bit = speed_percent_to_8bit(speed_percent);
     motors.enable(speed_8bit, speed_8bit);
-    motors.move_a_counterclockwise();
+    motors.move_a_clockwise();
     motors.move_b_counterclockwise();
 }
 
@@ -30,14 +30,14 @@ void Piel::move_left(int speed_percent) {
     int speed_8bit = speed_percent_to_8bit(speed_percent);
     motors.enable(speed_8bit, speed_8bit);
     motors.move_a_clockwise();
-    motors.move_b_counterclockwise();
+    motors.move_b_clockwise();
 }
 
 void Piel::move_right(int speed_percent) {
     int speed_8bit = speed_percent_to_8bit(speed_percent);
     motors.enable(speed_8bit, speed_8bit);
     motors.move_a_counterclockwise();
-    motors.move_b_clockwise();
+    motors.move_b_counterclockwise();
 }
 
 void Piel::stop() {

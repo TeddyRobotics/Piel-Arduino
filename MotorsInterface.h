@@ -11,7 +11,7 @@
 #define ain2 30
 #define pwma 6
 #define pwmb 13
-#define stby 9
+#define stby 1
 
 class MotorsInterface {
 
