@@ -8,7 +8,7 @@
 #define bin1 10
 #define bin2 5
 #define ain1 12
-#define ain2 30
+#define ain2 23
 #define pwma 6
 #define pwmb 13
 #define stby 1
