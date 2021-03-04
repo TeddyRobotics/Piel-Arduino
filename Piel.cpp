@@ -55,3 +55,13 @@ void Piel::turn_off_cheeks() {
     leds.Enable(0, false);
     leds.Enable(1, false);
 }
+
+bool Piel::is_upside_down() {
+    int filtered_reading = tilt_sensor.get_filtered_reading();
+    return filtered_reading == 1023;
+}
+
+bool Piel::is_poking_head() {
+    int filtered_reading = force_sensor.get_filtered_reading();
+    return filtered_reading != 1023;
+}

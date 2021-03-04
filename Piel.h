@@ -5,6 +5,8 @@
 
 #include "MotorsInterface.h"
 #include "LEDsInterface.h"
+#include "TiltSensor.h"
+#include "ForceSensor.h"
 
 class Piel {
 public:
@@ -17,6 +19,8 @@ public:
     void stop();
     void set_cheeks_colors(String left_color, String right_color);
     void turn_off_cheeks();
+    bool is_upside_down();
+    bool is_poking_head();
     
 private:
     inline int speed_percent_to_8bit(int percent) {
@@ -29,4 +33,6 @@ private:
 
     MotorsInterface motors;
     LEDsInterface leds;
+    TiltSensor tilt_sensor;
+    ForceSensor force_sensor;
 };
